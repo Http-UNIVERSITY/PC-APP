@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>VIP Access</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    text-align:center;
+    background:rgba(255,255,255,0.06);
+    padding:30px;
+    border-radius:20px;
+    width:300px;
+}
+
+.btn{
+    padding:10px 20px;
+    border:none;
+    background:#4ea1ff;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>💎 VIP Access</h2>
+    <p>برای باز کردن تمام کورس‌ها VIP شوید</p>
+
+    <button class="btn" onclick="buyVIP()">فعال کردن VIP</button>
+</div>
+
+<script>
+function buyVIP(){
+    localStorage.setItem("vip","true");
+    alert("VIP فعال شد 🚀");
+    window.location.href = "course-video.html";
+}
+</script>
+
+</body>
+</html>
