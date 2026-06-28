@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Settings - CoursePro</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    color:white;
+}
+
+/* BOX */
+.settings-box{
+    width:380px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(12px);
+    box-shadow:0 0 20px rgba(78,161,255,0.25);
+}
+
+/* TITLE */
+.settings-box h2{
+    text-align:center;
+    color:#4ea1ff;
+    margin-bottom:20px;
+}
+
+/* ITEM */
+.item{
+    background:rgba(255,255,255,0.08);
+    padding:12px;
+    border-radius:12px;
+    margin:10px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  width: 45px;
+  height: 24px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top:0; left:0; right:0; bottom:0;
+  background-color: #555;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4ea1ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(21px);
+}
+
+/* BUTTON */
+.btn{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#4ea1ff;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#2f8cff;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="settings-box">
+
+    <h2>⚙️ Settings</h2>
+
+    <div class="item">
+        <span>Dark Mode</span>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="item">
+        <span>Notifications</span>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="item">
+        <span>VIP Mode</span>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <button class="btn" onclick="save()">Save Settings</button>
+
+</div>
+
+<script>
+function save(){
+    alert("تنظیمات ذخیره شد ✅");
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
