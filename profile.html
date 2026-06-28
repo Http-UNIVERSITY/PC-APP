@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Profile - CoursePro</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    color:white;
+}
+
+/* PROFILE BOX */
+.profile-box{
+    width:360px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(12px);
+    box-shadow:0 0 20px rgba(78,161,255,0.25);
+    text-align:center;
+}
+
+/* AVATAR */
+.avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#4ea1ff,#2f8cff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    font-weight:bold;
+    margin:0 auto 15px auto;
+    color:black;
+}
+
+/* NAME */
+.profile-box h2{
+    color:#4ea1ff;
+    margin-bottom:5px;
+}
+
+.profile-box p{
+    color:#aaa;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+/* INFO */
+.info{
+    background:rgba(255,255,255,0.08);
+    padding:10px;
+    border-radius:12px;
+    margin:8px 0;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* BUTTON */
+.btn{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#4ea1ff;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#2f8cff;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="profile-box">
+
+    <div class="avatar">U</div>
+
+    <h2>User Name</h2>
+    <p>user@example.com</p>
+
+    <div class="info">
+        <span>Membership</span>
+        <span>VIP</span>
+    </div>
+
+    <div class="info">
+        <span>Courses</span>
+        <span>12</span>
+    </div>
+
+    <div class="info">
+        <span>Status</span>
+        <span>Active</span>
+    </div>
+
+    <button class="btn" onclick="edit()">Edit Profile</button>
+
+</div>
+
+<script>
+function edit(){
+    alert("رفتن به صفحه ویرایش پروفایل ✏️");
+    window.location.href = "edit-profile.html";
+}
+</script>
+
+</body>
+</html>
