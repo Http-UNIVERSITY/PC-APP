@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Course Locked</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    color:white;
+}
+
+/* TOP */
+.topbar{
+    padding:15px;
+    background:rgba(255,255,255,0.05);
+    display:flex;
+    justify-content:space-between;
+}
+
+/* LOCK SCREEN */
+.lock{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80vh;
+    flex-direction:column;
+    text-align:center;
+}
+
+.lock i{
+    font-size:60px;
+    color:#ffcc00;
+    margin-bottom:20px;
+}
+
+.btn{
+    padding:10px 20px;
+    background:#4ea1ff;
+    border:none;
+    border-radius:10px;
+    color:black;
+    cursor:pointer;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <h2>🎓 Course Pro</h2>
+    <div><i class="fa fa-user"></i> User</div>
+</div>
+
+<!-- LOCK AREA -->
+<div id="locked" class="lock">
+    <i class="fa fa-lock"></i>
+    <h2>این کورس قفل است 🔒</h2>
+    <p>برای دسترسی باید VIP باشید</p>
+    <button class="btn" onclick="goVIP()">خرید VIP</button>
+</div>
+
+<!-- VIDEO AREA -->
+<div id="content" style="display:none;padding:20px;">
+
+    <h2 style="color:#4ea1ff;">HTML Course</h2>
+
+    <video width="100%" controls>
+        <source src="video1.mp4">
+    </video>
+
+</div>
+
+<script>
+/* 🔥 VIP CHECK (simple localStorage) */
+let isVIP = localStorage.getItem("vip") === "true";
+
+if(isVIP){
+    document.getElementById("locked").style.display="none";
+    document.getElementById("content").style.display="block";
+}
+
+function goVIP(){
+    window.location.href = "vip.html";
+}
+</script>
+
+</body>
+</html>
