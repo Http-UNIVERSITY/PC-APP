@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body style="background:#0a1a33;color:white;text-align:center;padding-top:100px;">
+
+<h1>🎉 پرداخت موفق بود</h1>
+
+<button onclick="activateVIP()">فعال سازی VIP</button>
+
+<script>
+async function activateVIP(){
+
+    let token = localStorage.getItem("token");
+
+    await fetch("http://localhost:3000/vip/buy",{
+        method:"POST",
+        headers:{
+            "Authorization": token
+        }
+    });
+
+    alert("VIP فعال شد 🚀");
+    window.location.href = "course-video.html";
+}
+</script>
+
+</body>
+</html>
