@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Pro Course Dashboard</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    color:white;
+    display:flex;
+    height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:260px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    transition:0.3s;
+}
+
+.sidebar h2{
+    color:#4ea1ff;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.menu a{
+    display:flex;
+    gap:10px;
+    padding:12px;
+    margin:8px 0;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background:#4ea1ff;
+    color:black;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:20px;
+}
+
+/* TOP BAR */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.search{
+    width:300px;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.card{
+    background:rgba(255,255,255,0.06);
+    padding:20px;
+    border-radius:15px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:#4ea1ff;
+    color:black;
+}
+
+.card i{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+/* COURSES */
+.courses{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.course{
+    background:rgba(255,255,255,0.06);
+    padding:15px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.course:hover{
+    transform:scale(1.03);
+}
+
+.progress{
+    height:8px;
+    background:#111;
+    border-radius:20px;
+    margin-top:10px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:8px;
+    background:#4ea1ff;
+}
+
+.btn{
+    margin-top:10px;
+    padding:8px 12px;
+    background:#4ea1ff;
+    border:none;
+    color:black;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>🎓 CoursePro</h2>
+
+    <div class="menu">
+        <a href="#"><i class="fa fa-home"></i> داشبورد</a>
+        <a href="#"><i class="fa fa-book"></i> کورس‌ها</a>
+        <a href="#"><i class="fa fa-play"></i> ویدیوها</a>
+        <a href="#"><i class="fa fa-user"></i> پروفایل</a>
+        <a href="#"><i class="fa fa-gear"></i> تنظیمات</a>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="topbar">
+        <input class="search" placeholder="جستجوی کورس...">
+        <div>👤 علی احمدی</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="cards">
+
+        <div class="card">
+            <i class="fa fa-book"></i>
+            <h3>12 کورس</h3>
+            <p>همه کورس‌ها</p>
+        </div>
+
+        <div class="card">
+            <i class="fa fa-video"></i>
+            <h3>48 درس</h3>
+            <p>ویدیوهای فعال</p>
+        </div>
+
+        <div class="card">
+            <i class="fa fa-clock"></i>
+            <h3>32 ساعت</h3>
+            <p>زمان یادگیری</p>
+        </div>
+
+        <div class="card">
+            <i class="fa fa-trophy"></i>
+            <h3>85%</h3>
+            <p>پیشرفت کلی</p>
+        </div>
+
+    </div>
+
+    <!-- COURSES -->
+    <h2 style="margin-top:30px;">📚 کورس‌های فعال</h2>
+
+    <div class="courses">
+
+        <div class="course">
+            <h3>HTML & CSS</h3>
+            <p>شروع از صفر تا پیشرفته</p>
+            <div class="progress">
+                <div class="progress-bar" style="width:80%"></div>
+            </div>
+            <button class="btn">ادامه</button>
+        </div>
+
+        <div class="course">
+            <h3>JavaScript</h3>
+            <p>منطق و برنامه‌نویسی</p>
+            <div class="progress">
+                <div class="progress-bar" style="width:55%"></div>
+            </div>
+            <button class="btn">ادامه</button>
+        </div>
+
+        <div class="course">
+            <h3>React JS</h3>
+            <p>ساخت اپلیکیشن مدرن</p>
+            <div class="progress">
+                <div class="progress-bar" style="width:30%"></div>
+            </div>
+            <button class="btn">ادامه</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
