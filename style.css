@@ -1,0 +1,19 @@
+body{
+    font-family: Arial;
+    background:#0f0f1a;
+    color:white;
+    text-align:center;
+}
+
+.course{
+    background:#1c1c2e;
+    margin:10px auto;
+    padding:15px;
+    width:300px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.course:hover{
+    background:#2a2a40;
+}
