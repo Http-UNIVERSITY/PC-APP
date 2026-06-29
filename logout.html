@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+    
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOGOUT-COURSE</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    color:white;
+}
+
+/* LOGOUT BOX */
+.logout-box{
+    width:360px;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(12px);
+    box-shadow:0 0 20px rgba(78,161,255,0.2);
+    text-align:center;
+}
+
+/* TITLE */
+.logout-box h2{
+    color:#4ea1ff;
+    margin-bottom:10px;
+}
+
+/* INPUTS */
+.input-box{
+    margin:15px 0;
+    position:relative;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px 40px 12px 12px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    background:rgba(255,255,255,0.08);
+    color:white;
+}
+
+.input-box i{
+    position:absolute;
+    right:10px;
+    top:12px;
+    color:#4ea1ff;
+}
+
+/* BUTTON */
+.btn{
+    width:100%;
+    padding:12px;
+    background:#4ea1ff;
+    border:none;
+    border-radius:10px;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#2f8cff;
+}
+
+/* TEXT */
+.small{
+    margin-top:15px;
+    font-size:13px;
+    color:#aaa;
+}
+
+.small a{
+    color:#4ea1ff;
+    text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="logout-box">
+
+    <h2>🔐 Logout CoursePro</h2>
+    <p style="color:#aaa;font-size:13px;">به سیستم کورس وارد شوید</p>
+
+    <!-- EMAIL -->
+    <div class="input-box">
+        <input type="email" placeholder="ایمیل">
+        <i class="fa fa-envelope"></i>
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="input-box">
+        <input type="password" placeholder="رمز عبور">
+        <i class="fa fa-lock"></i>
+    </div>
+
+    <button class="btn" onclick="logout()">ورود</button>
+
+    <p class="small">
+        حساب نداری؟ <a href="index.html">ثبت‌نام</a>
+    </p>
+
+</div>
+
+<script>
+function login(){
+    alert("ورود موفق شد 🚀");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
