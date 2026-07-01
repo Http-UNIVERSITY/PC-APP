@@ -1,56 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>
-		REJISTRATION FORM
-</title>
-	<font face="lato" size="7"><font color="white"></font>
-	<meta charset="utf-8">
-	<meta name="viewport"content="width=device-width,
-	initial-scale-1>
-	<title>sample file </title>
-	<link rel="stylesheet" herf="Css/style.css">
-	<style type="text/css">
-		h1{
-			color:black;
-			font-size: 40px;
-		}
-		
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADMIN CRUD</title>
 
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#0b1220,#111a2e,#0a0f1d);
+    color:white;
+}
 
-		body{
-			background-image:url(.jpg);
-			background-size:cover;
-			background background-attachment:fixed;
-		}
-		.up{
-			colar: #A22B;
-		}
-	</style>
-	<h1>ADDMIN FORM </h1>
-	<fieldset>
-		<legend>personal information</legend>
-		 <form action="page2.html">
-		 	id<input type="text" id="txtid" name="txtid"/><br/>
-    	 first name <input type="text" id="txtfirstname" name="txtfirstname"/><br/>
-   father name<input type="text" id="txtfathername" name="txtfathername"/><br/>
-   last name <input type="text" id="txtlastname" name="txtlastname"/><br/>
-    password<input type="password" id="pwdpass"/><br/>
- 
-    <input type="radio" name="rdbgender" value="m"/>male
-    <input type="radio" name="rdbgender" value="f"/>female<br/>
-     	<input type="date"/ ><br/>
-     
-    	
+/* header */
+header{
+    text-align:center;
+    padding:20px;
+    font-size:28px;
+    font-weight:bold;
+    color:#4da3ff;
+}
 
-    	 <input type="reset" value="SEARCH"/>
-   <input type="submit" value="RAJISTER"/><br/>
-   <input type="submit" value="UPDATE"/>
-   <input type="submiT" value="DELETE"/>
-   
-    </form>
-  
+/* container */
+.container{
+    width:95%;
+    max-width:1000px;
+    margin:auto;
+}
 
- 
-    </fieldset>
-	</head>
+/* form box */
+.form-box{
+    background:#141f35;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+/* buttons */
+.btn{
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin:5px;
+    font-weight:bold;
+}
+
+.add{ background:#4da3ff; color:white; }
+.update{ background:#ffb300; color:black; }
+.delete{ background:#ff4d4d; color:white; }
+.search{ background:#00c896; color:white; }
+
+/* table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#141f35;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+th,td{
+    padding:12px;
+    border-bottom:1px solid #222b44;
+    text-align:center;
+}
+
+th{
+    background:#1c2a4a;
+    color:#4da3ff;
+}
+
+tr:hover{
+    background:#1a2642;
+}
+
+.actions button{
+    padding:5px 10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>🧑‍💻 ADMIN CRUD SYSTEM</header>
+
+<div class="container">
+
+    <!-- REGISTER FORM -->
+    <div class="form-box">
+        <h3>➕ Register User</h3>
+
+        <input type="text" placeholder="ID">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Father Name">
+        <input type="text" placeholder="Last Name">
+        <input type="password" placeholder="Password">
+
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <button class="btn add">Register</button>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="form-box">
+        <h3>🔍 Search User</h3>
+        <input type="text" placeholder="Enter ID or Name">
+        <button class="btn search">Search</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="form-box">
+        <h3>📋 Users List</h3>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Father</th>
+                <th>Last</th>
+                <th>Gender</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Ali</td>
+                <td>Ahmad</td>
+                <td>Khan</td>
+                <td>Male</td>
+                <td class="actions">
+                    <button class="update">Update</button>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
