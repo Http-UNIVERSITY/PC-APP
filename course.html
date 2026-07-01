@@ -86,7 +86,7 @@ video{
 
 <!-- TOP -->
 <div class="topbar">
-    <h2>🎓 HTML Course</h2>
+    <h2>🎓 WEB DEVOLAPMENT HTML&CSS Course</h2>
     <div><i class="fa fa-user"></i> User</div>
 </div>
 
@@ -97,27 +97,29 @@ video{
     <div class="video-box">
         <h3 class="title" id="videoTitle">Intro Video</h3>
 
-        <video id="videoPlayer" controls>
-            <source src="video1.mp4" type="video/mp4">
+        <video id="" controls>
+            <source src="video.mp4" type="video/mp4">
         </video>
+       
+
 
         <p style="margin-top:10px;color:#aaa;">
-            این درس را مشاهده کنید و تمرین انجام دهید
+            PLAY AND VEIW THE VIDEO
         </p>
     </div>
 
     <!-- LESSON LIST -->
     <div class="lessons">
 
-        <div class="lesson" onclick="changeVideo('video1.mp4','Intro HTML')">
+        <div class="lesson" onclick="changeVideo('video.mp4','Intro HTML')">
             📘 Intro HTML
         </div>
 
-        <div class="lesson" onclick="changeVideo('video2.mp4','Tags & Elements')">
+        <div class="lesson" onclick="changeVideo('video.mp4','Tags & Elements')">
             📗 Tags & Elements
         </div>
 
-        <div class="lesson" onclick="changeVideo('video3.mp4','Forms in HTML')">
+        <div class="lesson" onclick="changeVideo('video.mp4','Forms in HTML')">
             📕 Forms
         </div>
 
@@ -130,50 +132,10 @@ video{
 </div>
 
     
-<!-- TOP -->
-<div class="topbar">
-    <h2>🎓 PC-APP Course</h2>
-    <div><i class="fa fa-user"></i> User</div>
-</div>
-
-<!-- MAIN -->
-<div class="container">
-
-    <!-- VIDEO -->
-    <div class="video-box">
-        <h3 class="title" id="videoTitle">Intro Video</h3>
-
-        <video id="videoPlayer" controls>
-            <source src="video1.mp4" type="video/mp4">
-        </video>
-
-        <p style="margin-top:10px;color:#aaa;">
-            این درس را مشاهده کنید و تمرین انجام دهید
-        </p>
-    </div>
-
-    <!-- LESSON LIST -->
-    <div class="lessons">
-
-        <div class="lesson" onclick="changeVideo('video1.mp4','Intro JAVA')">
-            📘 Intro JAVA
-        </div>
-
-        <div class="lesson" onclick="changeVideo('video2.mp4','Tags & Elements')">
-            📗 Tags & Elements
-        </div>
-
-        <div class="lesson" onclick="changeVideo('video3.mp4','Forms ')">
-            📕 Forms
-        </div>
-
-        <div class="lesson" onclick="changeVideo('video4.mp4','connector')">
-            🎨 CONNECTOR 
-        </div>
-
     </div>
 
 </div>
+ <img src="video.jpg">
 <script>
 function changeVideo(src, title){
     document.getElementById("videoPlayer").src = src;
