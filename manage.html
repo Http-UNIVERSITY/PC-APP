@@ -139,8 +139,8 @@ th{
 
     <a href="dashboard.html">📊 Dashboard</a>
     <a href="course.html">📚 Courses web</a>
-    <a href="video.html">📚 Courses java</a>
-    <a href="logout.html">👤 Users</a>
+    <a href="course1.html">📚 Courses PC-APP</a>
+    <a href="rajister.html">👤 Users</a>
     <a href="setting.html">⚙️ Settings</a>
 </div>
 
@@ -148,15 +148,15 @@ th{
 <div class="main">
 
     <div class="topbar">
-        <input class="search" placeholder="🔍 جستجوی کورس..." onkeyup="searchCourse(this.value)">
+        <input class="search" placeholder="🔍 SEARCH COURSE" onkeyup="searchCourse(this.value)">
         <button class="btn" onclick="addCourse()">+ Add Course</button>
     </div>
 
     <!-- ADD -->
     <div class="add-box">
-        <input id="courseName" placeholder="نام کورس جدید">
-        <input id="courseLevel" placeholder="سطح (Beginner / Advanced)">
-        <button class="btn" onclick="addCourse()">اضافه</button>
+        <input id="courseName" placeholder="NAME NEW COURSE ">
+        <input id="courseLevel" placeholder="LEVEL(Beginner / Advanced)">
+        <button class="btn" onclick="addCourse()">ADD </button>
     </div>
 
     <br>
@@ -166,9 +166,9 @@ th{
         <thead>
             <tr>
                 <th>ID</th>
-                <th>نام کورس</th>
-                <th>سطح</th>
-                <th>عملیات</th>
+                <th>COURSE NAME</th>
+                <th>LEVEL</th>
+                <th>OPREATION</th>
             </tr>
         </thead>
 
@@ -179,9 +179,9 @@ th{
 
 <script>
 let courses = [
-    {id:1, name:"HTML & CSS", level:"Beginner"},
-    {id:2, name:"JavaScript", level:"Intermediate"},
-    {id:3, name:"React JS", level:"Advanced"}
+    {id:1, name:"WEB HTML & CSS", level:"Beginner"},
+    {id:2, name:"PC-APP JavaScript", level:"Intermediate"},
+    
 ];
 
 function render(data){
