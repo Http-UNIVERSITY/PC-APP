@@ -141,13 +141,20 @@ input:checked + .slider:before {
     </div>
 
     <button class="btn" onclick="save()">Save Settings</button>
+        <button class="btn" href="logout.html" onclick="edit()">LOGOUT</button>
 
 </div>
 
 <script>
 function save(){
-    alert("تنظیمات ذخیره شد ✅");
+    alert("go to dashboard ");
     window.location.href = "dashboard.html";
+}
+</script>
+<script>
+function edit(){
+    alert("LOGOUT✏️");
+    window.location.href = "logout.html";
 }
 </script>
 
