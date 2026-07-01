@@ -1,147 +1,128 @@
 <!DOCTYPE html>
-<html lang="fa">
-
-    
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COURSE VIDEO</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<title>Web Development Course</title>
 
 <style>
 body{
     margin:0;
     font-family:Arial;
-    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    background:#0b1220;
     color:white;
 }
 
-/* TOP BAR */
-.topbar{
+/* Header */
+.header{
+    padding:20px;
+    background:#111a2e;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 20px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
 }
 
-.topbar h2{
-    color:#4ea1ff;
+.header h1{
+    font-size:18px;
+    color:#4da3ff;
 }
 
-/* CONTAINER */
-.container{
-    display:flex;
-    gap:20px;
-    padding:20px;
-}
-
-/* VIDEO */
-.video-box{
-    flex:2;
-    background:rgba(255,255,255,0.05);
+/* Section */
+.section{
     padding:15px;
+}
+
+/* Video Cards */
+.video-card{
+    background:#141f35;
     border-radius:15px;
+    padding:10px;
+    margin-bottom:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
 }
 
 video{
     width:100%;
-    border-radius:15px;
-}
-
-/* LESSON LIST */
-.lessons{
-    flex:1;
-    background:rgba(255,255,255,0.05);
-    padding:15px;
-    border-radius:15px;
-    height:80vh;
-    overflow:auto;
-}
-
-.lesson{
-    padding:10px;
-    margin:10px 0;
-    background:rgba(255,255,255,0.06);
     border-radius:10px;
-    cursor:pointer;
-    transition:0.3s;
 }
 
-.lesson:hover{
-    background:#4ea1ff;
-    color:black;
+/* Image Gallery */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
 }
 
-/* TITLE */
+.img-card{
+    background:#141f35;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.img-card img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+}
+
+/* Titles */
 .title{
-    margin:10px 0;
-    color:#4ea1ff;
+    margin:15px 0 10px;
+    font-size:16px;
+    color:#4da3ff;
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- TOP -->
-<div class="topbar">
-    <h2>🎓 WEB DEVOLAPMENT HTML&CSS Course</h2>
-    <div><i class="fa fa-user"></i> User</div>
+<div class="header">
+    <h1>WEB DEVELOPMENT COURSE</h1>
+    <div>User</div>
 </div>
 
-<!-- MAIN -->
-<div class="container">
+<div class="section">
 
-    <!-- VIDEO -->
-    <div class="video-box">
-        <h3 class="title" id="videoTitle">Intro Video</h3>
+    <!-- VIDEOS FIRST -->
+    <div class="title">🎬 Course Videos</div>
 
-        <video id="" controls>
+    <div class="video-card">
+        <video controls>
             <source src="video.mp4" type="video/mp4">
         </video>
-       
-
-
-        <p style="margin-top:10px;color:#aaa;">
-            PLAY AND VEIW THE VIDEO
-        </p>
+        <p>Intro HTML Lesson</p>
     </div>
 
-    <!-- LESSON LIST -->
-    <div class="lessons">
-
-        <div class="lesson" onclick="changeVideo('video.mp4','Intro HTML')">
-            📘 Intro HTML
-        </div>
-
-        <div class="lesson" onclick="changeVideo('video.mp4','Tags & Elements')">
-            📗 Tags & Elements
-        </div>
-
-        <div class="lesson" onclick="changeVideo('video.mp4','Forms in HTML')">
-            📕 Forms
-        </div>
-
-        <div class="lesson" onclick="changeVideo('video4.mp4','CSS Basics')">
-            🎨 CSS Basics
-        </div>
-
+    <div class="video-card">
+        <video controls>
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+        <p>CSS Basics</p>
     </div>
 
-</div>
+    <!-- IMAGES AFTER -->
+    <div class="title">🖼️ Learning Images</div>
 
-    
+    <div class="gallery">
+        <div class="img-card">
+            <img src="img1.jpg">
+        </div>
+
+        <div class="img-card">
+            <img src="img2.jpg">
+        </div>
+
+        <div class="img-card">
+            <img src="img3.jpg">
+        </div>
+
+        <div class="img-card">
+            <img src="img4.jpg">
+        </div>
     </div>
 
 </div>
- <img src="video.jpg">
-<script>
-function changeVideo(src, title){
-    document.getElementById("videoPlayer").src = src;
-    document.getElementById("videoTitle").innerText = title;
-}
-</script>
 
 </body>
 </html>
