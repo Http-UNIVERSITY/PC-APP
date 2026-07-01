@@ -1,143 +1,103 @@
 <!DOCTYPE html>
 <html lang="fa">
-
-    
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MANAGE COURSE</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<title>SETUP & IDE</title>
+
+<!-- Font Awesome for download icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body{
     margin:0;
     font-family:Arial;
-    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    background:linear-gradient(135deg,#0b1220,#111a2e,#0a0f1d);
     color:white;
     display:flex;
-}
-
-/* SIDEBAR */
-.sidebar{
-    width:240px;
-    background:rgba(255,255,255,0.06);
-    backdrop-filter:blur(10px);
-    padding:20px;
+    justify-content:center;
+    align-items:center;
     height:100vh;
 }
 
-.sidebar h2{
-    color:#4ea1ff;
+/* container */
+.box{
+    width:90%;
+    max-width:500px;
     text-align:center;
 }
 
-.sidebar a{
-    display:block;
-    padding:12px;
-    margin:8px 0;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
+/* title */
+h1{
+    color:#4da3ff;
+    margin-bottom:5px;
 }
 
-.sidebar a:hover{
-    background:#4ea1ff;
-    color:black;
-}
-
-/* MAIN */
-.main{
-    flex:1;
-    padding:20px;
-}
-
-/* TOP BAR */
-.topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.sub{
+    opacity:0.7;
     margin-bottom:20px;
 }
 
-.search{
-    width:300px;
-    padding:10px;
-    border-radius:10px;
-    border:none;
-    background:rgba(255,255,255,0.08);
-    color:white;
+/* card */
+.card{
+    background:#141f35;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+    text-align:left;
 }
 
-/* BUTTON */
-.btn{
-    padding:10px 15px;
-    border:none;
-    border-radius:10px;
-    background:#4ea1ff;
-    color:black;
-    cursor:pointer;
-    margin-left:10px;
-}
-
-/* TABLE */
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:rgba(255,255,255,0.05);
-    border-radius:10px;
-    overflow:hidden;
-}
-
-th,td{
-    padding:12px;
-    text-align:center;
-    border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-th{
-    background:rgba(78,161,255,0.2);
-}
-
-.action-btn{
-    padding:6px 10px;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-.edit{
-    background:#ffcc00;
-}
-
-.delete{
-    background:#ff4d4d;
-    color:white;
-}
-
-.add-box{
-    margin-top:15px;
+/* download button */
+.download{
     display:flex;
-    gap:10px;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#4da3ff;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
 }
 
-.add-box input{
-    padding:10px;
-    border:none;
-    border-radius:10px;
-    background:rgba(255,255,255,0.08);
-    color:white;
-    flex:1;
+.download i{
+    font-size:18px;
 }
 </style>
 </head>
+
 <body>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
-    <h2>🎓 SETUP&IDE</h2>
+<div class="box">
 
-    <a href=".html">📊 SETUP&IDE WEB</a>
-    <a href=".html">📚 SETUP&IDE PC-APP</a>
+    <h1>⚙️ SETUP & IDE</h1>
+    <p class="sub">Download Web & PC Tools</p>
+
+    <!-- WEB -->
+    <div class="card">
+        <h3>📊 SETUP & IDE WEB</h3>
+        <p>Online Web IDE Package</p>
+
+        <a href="web-ide.zip" class="download" download>
+            Download Web IDE
+            <i class="fa-solid fa-download"></i>
+        </a>
     </div>
+
+    <!-- PC -->
+    <div class="card">
+        <h3>📦 SETUP & IDE PC APP</h3>
+        <p>Offline Desktop Setup</p>
+
+        <a href="pc-app.zip" class="download" download>
+            Download PC App
+            <i class="fa-solid fa-download"></i>
+        </a>
+    </div>
+
+</div>
+
 </body>
 </html>
