@@ -1,56 +1,134 @@
 <!DOCTYPE html>
-<html lang="fa">
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIP ACCESS</title>
+<title>VIP Course</title>
+
 <style>
 body{
     margin:0;
     font-family:Arial;
-    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    background:#0f0f2a;
     color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
 }
 
-.box{
-    text-align:center;
-    background:rgba(255,255,255,0.06);
-    padding:30px;
-    border-radius:20px;
-    width:300px;
+.banner{
+    width:100%;
+    height:220px;
+    background:url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97') center/cover;
 }
+
+.container{ padding:15px; }
 
 .btn{
-    padding:10px 20px;
+    width:100%;
+    padding:15px;
+    background:#ffb300;
     border:none;
-    background:#4ea1ff;
-    border-radius:10px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
     cursor:pointer;
+}
+
+.card{
+    background:#1a1a3a;
+    padding:15px;
     margin-top:10px;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+}
+
+.lock{
+    color:red;
+}
+
+.video-box{
+    display:none;
+    margin-top:20px;
+    background:#000;
+    padding:10px;
+    border-radius:12px;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="box">
-    <h2>💎 VIP Access</h2>
-    <p>برای باز کردن تمام کورس‌ها VIP شوید</p>
+<div class="banner"></div>
 
-    <button class="btn" onclick="buyVIP()">فعال کردن VIP</button>
+<div class="container">
+
+<h1>🔥 VIP Course</h1>
+<p>Buy VIP to unlock videos</p>
+
+<!-- BUY BUTTON -->
+<button class="btn" onclick="buyVIP()">💳 Buy VIP</button>
+
+<h2>📚 Lessons</h2>
+
+<div class="card" onclick="openVideo(1)">
+    Episode 1 - Intro <span class="lock">🔒</span>
+</div>
+
+<div class="card" onclick="openVideo(2)">
+    Episode 2 - Basics <span class="lock">🔒</span>
+</div>
+
+<div class="card" onclick="openVideo(3)">
+    Episode 3 - Advanced <span class="lock">🔒</span>
+</div>
+
+<!-- VIDEO PLAYER -->
+<div class="video-box" id="videoBox">
+    <h3>🎥 Video Player</h3>
+    <video id="videoPlayer" width="100%" controls>
+        <source id="videoSource" src="" type="video/mp4">
+    </video>
+</div>
+
 </div>
 
 <script>
+
+let isVIP = false;
+
+// 💳 خرید VIP (فعلاً تستی)
 function buyVIP(){
-    localStorage.setItem("vip","true");
-    alert("VIP فعال شد 🚀");
-    window.location.href = "course-video.html";
+    alert("VIP Activated 🎉");
+    isVIP = true;
 }
+
+// 🎥 باز کردن ویدیو
+function openVideo(num){
+
+    if(!isVIP){
+        alert("🔒 Please buy VIP first!");
+        return;
+    }
+
+    let videoBox = document.getElementById("videoBox");
+    let videoSource = document.getElementById("videoSource");
+
+    // نمونه ویدیوها (بعداً لینک واقعی می‌گذاری)
+    if(num == 1){
+        videoSource.src = "video1.mp4";
+    }
+    if(num == 2){
+        videoSource.src = "video2.mp4";
+    }
+    if(num == 3){
+        videoSource.src = "video3.mp4";
+    }
+
+    videoBox.style.display = "block";
+    document.getElementById("videoPlayer").load();
+}
+
 </script>
 
 </body>
