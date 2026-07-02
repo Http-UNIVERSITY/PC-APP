@@ -155,7 +155,7 @@ input:checked + .slider:before {
 
     <button class="btn" onclick="goPrivacy()">PRIVACY</button>
 
-    
+    <button class="btn" onclick="goAbout()">ABOUT</button>
 
     <button class="btn btn-red" onclick="logout()">LOGOUT</button>
 
@@ -171,7 +171,9 @@ function goPrivacy(){
     window.location.href = "privacy.html";
 }
 
-
+function goAbout(){
+    window.location.href = "about.html";
+}
 
 function logout(){
     alert("Logged out!");
