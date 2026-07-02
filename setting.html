@@ -141,17 +141,22 @@ input:checked + .slider:before {
     </div>
 </div>
 
-    <button class="btn" onclick="edit()">EDITE PROFILE</button>
+    <button class="btn" onclick="save()">SAVE SETTING</button>
+    <button class="btn" herf="privacy.html" onclick="edit()">PRIVACY</button
       <button class="btn" href="about.html" onclick="edit()">ABOUT</button>
-
 </div>
 
 
-    <button class="btn" herf="privacy.html" onclick="edit()">PRIVACY</button>
-        <button class="btn" href="logout.html" onclick="edit()">LOGOUT</button>
+    
 
 </div>
 
+<script>
+function save(){
+    alert("go to save ");
+    window.location.href = "rajister.html";
+}
+</script>
 <script>
 function edit(){
     alert("go to privacy ");
