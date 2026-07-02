@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fa">
 
-    
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SETTING COURS</title>
+<title>SETTING COURSE</title>
+
 <style>
 *{
     margin:0;
@@ -92,7 +92,7 @@ input:checked + .slider:before {
 /* BUTTON */
 .btn{
     width:100%;
-    margin-top:15px;
+    margin-top:10px;
     padding:12px;
     border:none;
     border-radius:10px;
@@ -105,6 +105,16 @@ input:checked + .slider:before {
 
 .btn:hover{
     background:#2f8cff;
+}
+
+/* danger button */
+.btn-red{
+    background:#ff4e4e;
+    color:white;
+}
+
+.btn-red:hover{
+    background:#ff2f2f;
 }
 </style>
 
@@ -140,32 +150,31 @@ input:checked + .slider:before {
         </label>
     </div>
 
+    <!-- BUTTONS -->
+    <button class="btn" onclick="saveSetting()">SAVE SETTING</button>
 
-    <button class="btn" onclick="save()">SAVE SETTING</button>
-    <button class="btn" herf="privacy.html" onclick="edit()">PRIVACY</button
-      <button class="btn" href="about.html" onclick="edit()">ABOUT</button>
-</div>
-
+    <button class="btn" onclick="goPrivacy()">PRIVACY</button>
 
     
 
+    <button class="btn btn-red" onclick="logout()">LOGOUT</button>
+
 </div>
 
 <script>
-function save(){
-    alert("go to save ");
-    window.location.href = "rajister.html";
+function saveSetting(){
+    alert("Settings saved!");
+    window.location.href = "index.html";
 }
-</script>
-<script>
-function edit(){
-    alert("go to privacy ");
+
+function goPrivacy(){
     window.location.href = "privacy.html";
 }
-</script>
-<script>
-function edit(){
-    alert("LOGOUT✏️");
+
+
+
+function logout(){
+    alert("Logged out!");
     window.location.href = "logout.html";
 }
 </script>
