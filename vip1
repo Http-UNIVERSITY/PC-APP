@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Download Center</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0066ff,#00c6ff);
+}
+
+.container{
+    width:350px;
+    background:white;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 10px 30px #00336655;
+    text-align:center;
+}
+
+h2{
+    color:#0066ff;
+    margin-bottom:25px;
+}
+
+.card{
+    background:#f2f8ff;
+    margin:15px 0;
+    padding:15px;
+    border-radius:18px;
+}
+
+button,a{
+    display:block;
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:15px;
+    background:#0066ff;
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover,a:hover{
+    background:#004dcc;
+}
+
+.pdf{
+    background:#00a86b;
+}
+
+video{
+    width:100%;
+    border-radius:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Download Center</h2>
+
+<div class="card">
+<h3>Video 1</h3>
+
+<video controls>
+<source src="video1.mp4" type="video/mp4">
+</video>
+
+<a href="video1.mp4" download>
+⬇ دانلود ویدیو
+</a>
+
+</div>
+
+
+<div class="card">
+<h3>Video 2</h3>
+
+<video controls>
+<source src="video2.mp4" type="video/mp4">
+</video>
+
+<a href="video2.mp4" download>
+⬇ دانلود ویدیو
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>PDF File</h3>
+
+<a class="pdf" href="plan.pdf" download>
+📄 دانلود PDF
+</a>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
