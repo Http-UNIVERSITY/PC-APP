@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+    
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COURSE LOCKED</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    color:white;
+}
+
+/* TOP */
+.topbar{
+    padding:15px;
+    background:rgba(255,255,255,0.05);
+    display:flex;
+    justify-content:space-between;
+}
+
+/* LOCK SCREEN */
+.lock{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80vh;
+    flex-direction:column;
+    text-align:center;
+}
+
+.lock i{
+    font-size:60px;
+    color:#ffcc00;
+    margin-bottom:20px;
+}
+
+.btn{
+    padding:10px 20px;
+    background:#4ea1ff;
+    border:none;
+    border-radius:10px;
+    color:black;
+    cursor:pointer;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <h2>🎓 FIVE LEARN PAGE</h2>
+    <div><i class="fa fa-user"></i> HOME</div>
+</div>
+
+
+
+<!-- VIDEO AREA -->
+<div id="content" style="padding:10px;">
+
+    <h3 style="color:#4ea1ff;">PC-APP Video</h3>
+
+    <video width="70%"  controls>
+        <source src="video.mp4">
+    </video>
+
+</div>
+<div id="content" style="padding:10px;">
+
+    <h4 style="color:#4ea1ff;">PC-APP Video1</h4>
+
+    <video width="70%"  controls>
+        <source src="video1.mp4">
+    </video>
+
+</div>
+
+
+<div class="card">
+    <h5>
+📱
+ Free pc-app pdf</h5>
+    <a class="btn" href="pc-app.pdf">INSTALL PDF </a>
+</div>
+
+<script>
+/* 🔥 VIP CHECK (simple localStorage) */
+let isVIP = localStorage.getItem("vip") === "true";
+
+if(isVIP){
+    document.getElementById("locked").style.display="none";
+    document.getElementById("content").style.display="block";
+}
+
+function goVIP(){
+    window.location.href = "vip.html";
+}
+</script>
+
+</body>
+</html>
