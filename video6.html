@@ -1,107 +1,96 @@
 <!DOCTYPE html>
-<html lang="fa">
-
-    
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COURSE LOCKED</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<title>First Learn Page</title>
 
 <style>
 body{
     margin:0;
-    font-family:Arial;
-    background:linear-gradient(135deg,#050b1a,#0a1a33);
+    font-family:Arial,sans-serif;
+    background:#08152e;
     color:white;
 }
 
-/* TOP */
-.topbar{
-    padding:15px;
-    background:rgba(255,255,255,0.05);
+header{
+    background:#121b33;
     display:flex;
     justify-content:space-between;
-}
-
-/* LOCK SCREEN */
-.lock{
-    display:flex;
-    justify-content:center;
     align-items:center;
-    height:80vh;
-    flex-direction:column;
-    text-align:center;
+    padding:20px;
 }
 
-.lock i{
-    font-size:60px;
-    color:#ffcc00;
-    margin-bottom:20px;
+header h1{
+    margin:0;
+    font-size:28px;
 }
 
-.btn{
-    padding:10px 20px;
-    background:#4ea1ff;
-    border:none;
+header a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+}
+
+.container{
+    padding:20px;
+}
+
+h2{
+    color:#4b8dff;
+}
+
+video{
+    width:100%;
+    max-width:500px;
+    border-radius:5px;
+    margin-bottom:35px;
+}
+
+.image-box{
+    margin-top:20px;
+}
+
+.image-box img{
+    width:220px;
     border-radius:10px;
-    color:black;
-    cursor:pointer;
-    margin-top:10px;
+    border:2px solid #4b8dff;
+}
+
+.image-box p{
+    font-size:22px;
+    margin-bottom:10px;
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="topbar">
-    <h2>🎓 SEVAN LEARN PAGE</h2>
-    <div><i class="fa fa-user"></i> HOME</div>
-</div>
+<header>
+<h1>🎓 FIRST LEARN PAGE</h1>
+<a href="#">HOME</a>
+</header>
 
+<div class="container">
 
+<h2>PC-APP Video</h2>
+<video controls>
+<source src="video1.mp4" type="video/mp4">
+</video>
 
-<!-- VIDEO AREA -->
-<div id="content" style="padding:10px;">
+<h2>PC-APP Video1</h2>
+<video controls>
+<source src="video2.mp4" type="video/mp4">
+</video>
 
-    <h3 style="color:#4ea1ff;">PC-APP Video</h3>
+<div class="image-box">
+<p>🖼 Free PC-APP Image</p>
 
-    <video width="70%"  controls>
-        <source src="video.mp4">
-    </video>
-
-</div>
-<div id="content" style="padding:10px;">
-
-    <h4 style="color:#4ea1ff;">PC-APP Video1</h4>
-
-    <video width="70%"  controls>
-        <source src="video1.mp4">
-    </video>
+<img src="photo.jpg" alt="Image">
 
 </div>
 
-
-<div class="card">
-    <h5>
-📱
- Free pc-app pdf</h5>
-    <a class="btn" href="pc-app.pdf">INSTALL PDF </a>
 </div>
-
-<script>
-/* 🔥 VIP CHECK (simple localStorage) */
-let isVIP = localStorage.getItem("vip") === "true";
-
-if(isVIP){
-    document.getElementById("locked").style.display="none";
-    document.getElementById("content").style.display="block";
-}
-
-function goVIP(){
-    window.location.href = "vip.html";
-}
-</script>
 
 </body>
 </html>
