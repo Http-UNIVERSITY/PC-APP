@@ -1,80 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Second Learn Page</title>
 <style>
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#08152e;
-    color:white;
+background:#111;
+font-family:Arial;
 }
-header{
-    background:#121b33;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
+.box{
+width:90%;
+margin:20px auto;
+background:#1e1e1e;
+border-radius:15px;
+overflow:hidden;
 }
-header h1{
-    margin:0;
-    font-size:28px;
+.header{
+background:#333;
+color:white;
+padding:12px;
 }
-header a{
-    color:white;
-    text-decoration:none;
-    font-size:20px;
+button{
+background:#008cff;
+color:white;
+border:0;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
 }
-.container{
-    padding:20px;
+pre{
+color:#9cdcfe;
+padding:20px;
+font-size:16px;
 }
-h2{
-    color:#4b8dff;
-}
-video{
-    width:100%;
-    max-width:500px;
-    border-radius:5px;
-    margin-bottom:35px;
-}
-.image-box{
-    margin-top:20px;
-}
-.image-box img{
-    width:220px;
-}
+.preview{
+background:#0499c7;
+width:500px;
+margin:30px auto;
+padding:20px;
 border-radius:10px;
-border:2px solid #4b8dff;
-.image-box p{
-font-size:22px;
-margin-bottom:10px;
+}
+.card{
+background:white;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+.card button{
+background:#eee;
+color:#008;
+height:70px;
 }
 </style>
 </head>
 <body>
-<header>
-<h1>
-🎓
- SECOND LEARN PAGE</h1>
-<a href="#">HOME</a>
-</header>
-<div class="container">
-<h2>WEBSITE Video</h2>
-<video controls>
-<source src="video1.mp4" type="video/mp4">
-</video>
-<h2>WEBSITE Video1</h2>
-<video controls>
-<source src="video2.mp4" type="video/mp4">
-</video>
-<div class="image-box">
-<p>
-🖼
- Free WEBSITE Image</p>
-<img src="1234.jpg" alt="Image">
+<div class="box">
+<div class="header">
+Dashboard.java
+<button onclick="copyCode()">
+📋
+ Copy</button>
+</div>
+<pre id="code">
+public class Dashboard extends JFrame{
+JButton home;
+JButton student;
+JButton teacher;
+JButton setting;
+JButton classes;
+JButton update;
+}
+</pre>
+</div>
+<h2 style="color:white;text-align:center">
+Preview
+</h2>
+<div class="preview">
+<h2 style="color:white">
+KeepToo Management
+</h2>
+<div class="card">
+<button>
+🏠
+ Home</button>
+<button>
+👥
+ Students</button>
+<button>
+👨
+ Teacher</button>
+<button>
+⚙
+ Setting</button>
+<button>
+☰
+ Classes</button>
+<button>
+⬇
+ Update</button>
 </div>
 </div>
+<script>
+function copyCode(){
+let code=document.getElementById("code").innerText;
+navigator.clipboard.writeText(code);
+alert("Java Code Copied");
+}
+</script>
 </body>
 </html>
