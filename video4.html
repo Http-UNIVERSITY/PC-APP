@@ -1,80 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Five Learn Page</title>
 <style>
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#08152e;
-    color:white;
+background:#111;
+font-family:Arial;
 }
-header{
-    background:#121b33;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
+.code-box{
+background:#1e1e1e;
+color:white;
+width:90%;
+margin:20px auto;
+border-radius:15px;
+overflow:hidden;
 }
-header h1{
-    margin:0;
-    font-size:28px;
+.header{
+padding:15px;
+background:#333;
+font-size:20px;
 }
-header a{
-    color:white;
-    text-decoration:none;
-    font-size:20px;
+button{
+background:#008cff;
+color:white;
+border:0;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
 }
-.container{
-    padding:20px;
+pre{
+padding:20px;
+color:#9cdcfe;
+font-size:15px;
 }
-h2{
-    color:#4b8dff;
+.report{
+width:800px;
+margin:30px auto;
+background:white;
 }
-video{
-    width:100%;
-    max-width:500px;
-    border-radius:5px;
-    margin-bottom:35px;
+.title{
+background:#09b5c9;
+color:white;
+padding:25px;
+font-size:25px;
 }
-.image-box{
-    margin-top:20px;
+table{
+width:100%;
+border-collapse:collapse;
 }
-.image-box img{
-    width:220px;
+th{
+background:#09b5c9;
+color:white;
+padding:10px;
 }
-border-radius:10px;
-border:2px solid #4b8dff;
-.image-box p{
-font-size:22px;
-margin-bottom:10px;
+td{
+padding:10px;
+border:1px solid #ccc;
 }
 </style>
 </head>
 <body>
-<header>
-<h1>
-🎓
- FIVE LEARN PAGE</h1>
-<a href="#">HOME</a>
-</header>
-<div class="container">
-<h2>WEBSITE Video</h2>
-<video controls>
-<source src="video1.mp4" type="video/mp4">
-</video>
-<h2>WEBSITE Video1</h2>
-<video controls>
-<source src="video2.mp4" type="video/mp4">
-</video>
-<div class="image-box">
-<p>
-🖼
- Free WEBSITE Image</p>
-<img src="1234.jpg" alt="Image">
+<div class="code-box">
+<div class="header">
+StudentsReport.java
+<button onclick="copyCode()">
+📋
+Copy
+</button>
+<button onclick="showPreview()">
+</button>
 </div>
+<pre id="code">
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+public class StudentsReport extends JFrame{
+JTable table;
+public StudentsReport(){ ﻧﻤﺎﯾﺶ
+
+▶
+setTitle("Students Reports");
+setSize(800,500);
+String data[][]={
+{"100","Omar","Ali","Kabul","Male"},
+{"101","Karim","Rahim","Herat","Male"},
+{"102","Narois","Rahim","Herat","Female"}
+};
+String column[]={
+"ID",
+"Name",
+"Father Name",
+"Address",
+"Gender"
+};
+table=new JTable(
+new DefaultTableModel(data,column)
+);
+add(new JScrollPane(table));
+this.dispose();
+}
+public static void main(String args[]){
+new StudentsReport();
+}
+}
+</pre>
 </div>
+<div id="preview"></div>
+<script>
+function copyCode(){
+let code =
+document.getElementById("code").innerText;
+navigator.clipboard.writeText(code);
+alert("Java Code Copied");
+}
+function showPreview(){
+document.getElementById("preview").innerHTML=`
+<div class="report">
+<div class="title">
+📊
+Students Reports
+</div>
+<br>
+<button>
+🖨
+Print
+</button>
+<button>
+PDF
+</button>
+<button>
+W
+</button>
+<button>
+X
+</button>
+<table>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Father Name</th>
+<th>Address</th>
+<th>Gender</th>
+</tr>
+<tr>
+<td>100</td>
+<td>Omar</td>
+<td>Ali</td>
+<td>Kabul</td>
+<td>Male</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Karim</td>
+<td>Rahim</td>
+<td>Herat</td>
+<td>Male</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Narois</td>
+<td>Rahim</td>
+<td>Herat</td>
+<td>Female</td>
+</tr>
+</table>
+</div>
+`;
+}
+</script>
 </body>
 </html>
