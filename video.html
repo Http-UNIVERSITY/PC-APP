@@ -1,80 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>First Learn Page</title>
 <style>
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#08152e;
+    background:#111;
+    font-family:monospace;
+}
+.editor{
+    width:90%;
+    margin:30px auto;
+    background:#1e1e1e;
+    border-radius:10px;
+    overflow:hidden;
+}
+.top{
+    background:#333;
     color:white;
+    padding:10px;
 }
-header{
-    background:#121b33;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
-}
-header h1{
-    margin:0;
-    font-size:28px;
-}
-header a{
+button{
+    background:#008cff;
     color:white;
-    text-decoration:none;
-    font-size:20px;
-}
-.container{
-    padding:20px;
-}
-h2{
-    color:#4b8dff;
-}
-video{
-    width:100%;
-    max-width:500px;
+    border:0;
+    padding:8px 18px;
+    margin:5px;
     border-radius:5px;
-    margin-bottom:35px;
 }
-.image-box{
-    margin-top:20px;
+pre{
+    padding:20px;
+    color:#9cdcfe;
+    font-size:16px;
+    min-height:300px;
 }
-.image-box img{
-    width:220px;
+.keyword{
+    color:#569cd6;
 }
-border-radius:10px;
-border:2px solid #4b8dff;
-.image-box p{
-font-size:22px;
-margin-bottom:10px;
+.string{
+    color:#ce9178;
 }
 </style>
 </head>
 <body>
-<header>
-<h1>
-🎓
- FIRST LEARN PAGE</h1>
-<a href="#">HOME</a>
-</header>
-<div class="container">
-<h2>WEBSITE Video</h2>
-<video controls>
-<source src="video1.mp4" type="video/mp4">
-</video>
-<h2>WEBSITE Video1</h2>
-<video controls>
-<source src="video2.mp4" type="video/mp4">
-</video>
-<div class="image-box">
-<p>
-🖼
- Free WEBSITE Image</p>
-<img src="photo.jpg" alt="Image">
+<div class="editor">
+<div class="top">
+Java LoginForm.java
+<button onclick="copyCode()">
+📋
+ Copy</button>
+<button onclick="show()">
+▶>button/<ﻧﻤﺎﯾﺶ
+ 
 </div>
+<pre id="code">
+<span class="keyword">
+private void jButton2ActionPerformed
+</span>(java.awt.event.ActionEvent evt) {
+if(txtname.getText().equals("admin")
+&& txtpassword.getText().equals("123"))
+{
+Dashboard db = new Dashboard();
+db.setVisible(true);
+this.dispose();
+}
+else{
+JOptionPane.showMessageDialog(null,
+"User name or password is not valid");
+}
+}
+</pre>
 </div>
+<div id="result"></div>
+<script>
+function copyCode(){
+let text=document.getElementById("code").innerText;
+navigator.clipboard.writeText(text);
+alert("Java Code Copied");
+}
+function show(){
+document.getElementById("result").innerHTML=
+`
+<div style="
+background:#29445e;
+width:400px;
+padding:30px;
+margin:auto;
+color:white;
+border-radius:10px">
+<h2>LoginForm</h2>
+Username:
+<input value="admin"><br><br>
+Password:
+<input type="password" value="123"><br><br>
+<button style="background:green">
+Login
+</button>
+<button style="background:red">
+Cancel
+</button>
+</div>
+`;
+}
+</script>
 </body>
 </html>
