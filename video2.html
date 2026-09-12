@@ -1,80 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>tiertd Learn Page</title>
 <style>
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#08152e;
-    color:white;
+background:#111;
+font-family:Arial;
 }
-header{
-    background:#121b33;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
+.code-box{
+background:#1e1e1e;
+color:white;
+width:90%;
+margin:20px auto;
+border-radius:15px;
+overflow:hidden;
 }
-header h1{
-    margin:0;
-    font-size:28px;
+.header{
+padding:15px;
+background:#333;
+font-size:20px;
 }
-header a{
-    color:white;
-    text-decoration:none;
-    font-size:20px;
+button{
+background:#008cff;
+color:white;
+border:0;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
 }
-.container{
-    padding:20px;
+pre{
+padding:20px;
+color:#9cdcfe;
+font-size:15px;
 }
-h2{
-    color:#4b8dff;
+.register{
+width:600px;
+margin:30px auto;
+background:white;
 }
-video{
-    width:100%;
-    max-width:500px;
-    border-radius:5px;
-    margin-bottom:35px;
+.title{
+background:#09b5c9;
+color:white;
+padding:25px;
+font-size:25px;
 }
-.image-box{
-    margin-top:20px;
+.form{
+padding:25px;
 }
-.image-box img{
-    width:220px;
-}
-border-radius:10px;
-border:2px solid #4b8dff;
-.image-box p{
-font-size:22px;
-margin-bottom:10px;
+input{
+display:block;
+width:350px;
+margin:15px;
+padding:10px;
+border:0;
+border-bottom:3px solid #09b5c9;
 }
 </style>
 </head>
 <body>
-<header>
-<h1>
-🎓
- TIERTD LEARN PAGE</h1>
-<a href="#">HOME</a>
-</header>
-<div class="container">
-<h2>WEBSITE Video</h2>
-<video controls>
-<source src="video1.mp4" type="video/mp4">
-</video>
-<h2>WEBSITE Video1</h2>
-<video controls>
-<source src="video2.mp4" type="video/mp4">
-</video>
-<div class="image-box">
-<p>
-🖼
- Free WEBSITE Image</p>
-<img src="photo.jpg" alt="Image">
+<!-- Java Code -->
+<div class="code-box">
+<div class="header">
+RegisterForm.java
+<button onclick="copyCode()">
+📋
+Copy
+</button>
+<button onclick="showPreview()">
+</button>
+</div>
+<pre id="code">
+import javax.swing.*;
+import java.awt.*;
+public class RegisterForm extends JFrame {
+public RegisterForm(){
+setTitle("Registration Form");
+setSize(600,500);
+JTextField firstname;
+JTextField lastname;
+JTextField username;
+JPasswordField password;
+JButton login;
+JButton reset;
+this.dispose();
+System.exit(0);
+}
+public static void main(String[] args){
+new RegisterForm();
+}
+}
+</pre> ﻧﻤﺎﯾﺶ
+
+▶
+</div>
+<!-- Preview -->
+<div id="preview"></div>
+<script>
+function copyCode(){
+let code =
+document.getElementById("code").innerText;
+navigator.clipboard.writeText(code);
+alert("Java Code Copied");
+}
+function showPreview(){
+document.getElementById("preview").innerHTML=`
+<div class="register">
+<div class="title">
+👤✏
+ Registration Form
+</div>
+<div class="form">
+First Name:
+<input placeholder="Enter your first name">
+Last Name:
+<input placeholder="Enter your last name">
+User Name:
+<input placeholder="Enter your user name">
+Password:
+<input type="password">
+Retype Password:
+<input type="password">
+<button>Login</button>
+<button>Reset</button>
 </div>
 </div>
+`;
+}
+</script>
 </body>
 </html>
