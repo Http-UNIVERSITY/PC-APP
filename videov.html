@@ -1,80 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>First Learn Page</title>
 <style>
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#08152e;
+    background:#111;
+    font-family:monospace;
+}
+.editor{
+    width:90%;
+    margin:30px auto;
+    background:#1e1e1e;
+    border-radius:10px;
+    overflow:hidden;
+}
+.top{
+    background:#333;
     color:white;
+    padding:10px;
 }
-header{
-    background:#121b33;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
-}
-header h1{
-    margin:0;
-    font-size:28px;
-}
-header a{
+button{
+    background:#008cff;
     color:white;
-    text-decoration:none;
-    font-size:20px;
-}
-.container{
-    padding:20px;
-}
-h2{
-    color:#4b8dff;
-}
-video{
-    width:100%;
-    max-width:500px;
+    border:0;
+    padding:8px 18px;
+    margin:5px;
     border-radius:5px;
-    margin-bottom:35px;
 }
-.image-box{
-    margin-top:20px;
+pre{
+    padding:20px;
+    color:#9cdcfe;
+    font-size:16px;
+    min-height:300px;
 }
-.image-box img{
-    width:220px;
+.keyword{
+    color:#569cd6;
 }
-border-radius:10px;
-border:2px solid #4b8dff;
-.image-box p{
-font-size:22px;
-margin-bottom:10px;
+.string{
+    color:#ce9178;
 }
 </style>
 </head>
 <body>
-<header>
-<h1>
-🎓
- FIRST LEARN PAGE</h1>
-<a href="#">HOME</a>
-</header>
-<div class="container">
-<h2>PC-APP Video</h2>
-<video controls>
-<source src="video1.mp4" type="video/mp4">
-</video>
-<h2>PC-APP Video1</h2>
-<video controls>
-<source src="video2.mp4" type="video/mp4">
-</video>
-<div class="image-box">
-<p>
-🖼
- Free PC-APP Image</p>
-<img src="1234.jpg" alt="Image">
+<div class="editor">
+<div class="top">
+Web LoginForm.html
+<button onclick="copyCode()">
+📋
+ Copy</button>
+<button onclick="show()">
+▶show</button>
+ 
 </div>
+
+<pre id="code">
+<span class="keyword">
+
+
+    <.!DOCTYPE html>
+<.html lang="fa">
+<.head>
+    <.meta charset="UTF-8">
+    <.meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <.title>WORKOUT</title>
+.script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+
+    <.script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "122002e8-7f7a-4e86-93fc-06ece6e2e972",
+        });
+      });
+    <./script>
+
+    <.style>
+        body {
+            background-image: url('workout.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 40px;
+        }
+        body {
+            background-image: url('workout.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .visit-btn {
+            display: block;
+            width: 200px;
+            margin: 15px auto;
+            padding: 12px;
+            text-align: center;
+            background: #ff9800;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .visit-btn:hover {
+            background: #e68900;
+        }
+
+        .card {
+            max-width: 420px;
+            margin: auto;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        input[type=submit] {
+            background: #2ea44f;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type=reset] {
+            background: #555;
+            color: white;
+            cursor: pointer;
+        }
+    <./style>
+<./head>
+
+<.body>
+
+
+
+<.h1>CREATE NEW ACCOUNT&LOGIN</h1>
+    
+    
+
+    <!-- Visit -->
+    
+
+    <!-- Form -->
+    <.fieldset class="card">
+        <.legend>Member LOGIN</legend>
+
+        
+            <.form action="page2.html">
+            <.label>First Name</label>
+            <.input type="text">
+
+       
+
+            <.label>Password</label>
+            <.input type="password">
+
+            <.div class="buttons">
+                <.input type="reset" value="RESET">
+                <.input type="submit" value="LOGIN">
+            <./div>
+                
+        <./form>
+    <./fieldset>
+
+<.a href="https://http-university.github.io/AZ-GYM-/" target="_blank" class="visit-btn">
+        Visit Workout Site
+    </a>
+
+
+    
+    
+
+<./body>
+<./html>
+</span>
+</pre>
 </div>
+<div id="result"></div>
+<script>
+function copyCode(){
+let text=document.getElementById("code").innerText;
+navigator.clipboard.writeText(text);
+alert("Java Code Copied");
+}
+function show(){
+document.getElementById("result").innerHTML=
+`
+<div style="
+background:#29445e;
+width:400px;
+padding:30px;
+margin:auto;
+color:white;
+border-radius:10px">
+<h2>LoginForm</h2>
+Username:
+<input value="admin"><br><br>
+Password:
+<input type="password" value="123"><br><br>
+<button style="background:green">
+Login
+</button>
+<button style="background:red">
+Cancel
+</button>
+</div>
+`;
+}
+</script>
 </body>
 </html>
