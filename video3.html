@@ -66,30 +66,84 @@ Copy
 </button>
 </div>
 <pre id="code">
-import javax.swing.*;
-public class ImportExport extends JFrame {
-public ImportExport(){
-setTitle("Import Export");
-setSize(600,400);
-JButton importBtn =
-new JButton("Import");
-JButton exportBtn =
-new JButton("Export");
-importBtn.addActionListener(e -> {
-System.out.println("Import Data");
-});
-exportBtn.addActionListener(e -> {
-System.out.println("Export Data");
-});
-this.dispose();
-System.exit(0);
-} ﻧﻤﺎﯾﺶ
 
-▶
-public static void main(String args[]){
-new ImportExport();
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+public class managementreport extends javax.swing.JFrame {
+
+    
+    public managementreport() {
+        initComponents();
+     
+    }
+
+   
+   
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        
+    }                                     
+
+    private void jLabel5MousePressed(java.awt.event.MouseEvent evt) {                                     
+        System.exit(0);
+        // TODO add your handling code here:
+    }                                    
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                     
+        // TODO add your handling code here:
+    }                                    
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+      try
+{
+   Class.forName("com.mysql.cj.jdbc.Driver");
+    Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/gym","root","1234");
+    String sql="select * from management where id=?";
+   PreparedStatement pstm= con.prepareStatement(sql);
+pstm.setInt(1, Integer.parseInt(txtid.getText()));
+ResultSet rs=pstm.executeQuery();
+DefaultTableModel dtm=(DefaultTableModel)table.getModel();
+if (rs.next())
+{
+   {
+       Object[] rows = new Object[7];
+             rows[0]=rs.getInt(1);
+             rows[1]=rs.getString(2);
+             rows[2]=rs.getString(3);
+             rows[3]=rs.getString(4);
+             rows[4]=rs.getString(5);
+             rows[5]=rs.getString(6);
+             rows[6]=rs.getString(7);
+             
+            }
 }
+else
+{
+JOptionPane.showMessageDialog(null,"RECORD NOT FOUND");
 }
+con.close();
+}
+catch (Exception e)
+{
+   JOptionPane.showMessageDialog(null, e.getMessage());
+}
+    }                                        
+
+  
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable table;
+    // End of variables declaration                   
+
+   
 </pre>
 </div>
 <div id="preview"></div>
