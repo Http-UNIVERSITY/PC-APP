@@ -1,346 +1,107 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AZ GYM VIP</title>
+<title>APP COURSE- Update & Purchase</title>
 
 <style>
-*{box-sizing:border-box}
 body{
     margin:0;
-    font-family:Arial,Tahoma,sans-serif;
-    background:linear-gradient(135deg,#050b18,#071d3d,#020711);
-    color:white;
-    min-height:100vh;
+    font-family:Arial;
+    background:linear-gradient(135deg,#0d47a1,#1976d2,#42a5f5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
+
 .container{
-    max-width:430px;
-    margin:auto;
-    padding:25px 18px;
-}
-.logo{
-    text-align:center;
-    font-size:34px;
-    font-weight:bold;
-    margin-top:25px;
-}
-.logo span{color:#00aaff}
-.card{
-    margin-top:25px;
+    width:350px;
+    background:white;
+    border-radius:20px;
     padding:25px;
-    border-radius:22px;
-    background:rgba(10,30,60,.85);
-    border:1px solid rgba(0,170,255,.35);
-    box-shadow:0 10px 35px rgba(0,0,0,.5);
-}
-.vip{
     text-align:center;
-    font-size:28px;
-    color:#00b7ff;
-    font-weight:bold;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
-.price{
-    text-align:center;
-    font-size:42px;
+
+.logo{
+    font-size:30px;
     font-weight:bold;
+    color:#1565c0;
+}
+
+.version{
+    background:#e3f2fd;
+    padding:10px;
+    border-radius:10px;
     margin:15px 0;
 }
-.price small{font-size:17px;color:#bbb}
-input{
+
+.btn{
     width:100%;
     padding:15px;
-    margin:8px 0;
     border:none;
     border-radius:12px;
-    background:#071426;
-    color:white;
-    outline:none;
-    border:1px solid #16466e;
-}
-button{
-    width:100%;
-    padding:15px;
+    font-size:16px;
     margin-top:12px;
-    border:0;
-    border-radius:12px;
-    font-size:17px;
-    font-weight:bold;
     cursor:pointer;
-}
-.pay{
-    background:linear-gradient(90deg,#008cff,#00c6ff);
     color:white;
 }
-.login{
-    background:#132d4d;
-    color:white;
+
+.update{
+    background:#2196f3;
 }
-.admin{
-    background:#222;
-    color:#00b7ff;
+
+.purchase{
+    background:#4caf50;
 }
-.features{
-    line-height:2.2;
-    color:#ddd;
+
+.price{
+    font-size:24px;
+    color:#2e7d32;
+    font-weight:bold;
 }
-.lock{
-    text-align:center;
-    font-size:55px;
-    margin-bottom:8px;
-}
-.hidden{display:none}
-.status{
-    padding:12px;
-    border-radius:10px;
-    background:#061426;
-    margin-top:15px;
-    text-align:center;
-}
-.success{color:#4cff9b}
-.error{color:#ff6b6b}
-.footer{
-    text-align:center;
-    color:#777;
-    margin-top:25px;
-    font-size:13px;
-}
+
 </style>
 </head>
-
 <body>
 
 <div class="container">
 
-    <div class="logo">AZ <span>GYM</span></div>
+    <div class="logo">APP COURSE</div>
 
-    <div class="card">
-
-        <div class="lock">🔐</div>
-
-        <div class="vip">VIP MEMBERSHIP</div>
-
-        <div class="price">
-            $15 <small>/ 30 Days</small>
-        </div>
-
-        <div class="features">
-            ✅ دسترسی به ویدیوهای VIP<br>
-            ✅ برنامه تمرینی اختصاصی<br>
-            ✅ برنامه غذایی<br>
-            ✅ دسترسی ۳۰ روزه<br>
-            ✅ محتوای مخصوص اعضای VIP
-        </div>
-
-        <button class="pay" onclick="payVIP()">
-            💳 PAY $15
-        </button>
-
-        <div id="paymentStatus" class="status hidden"></div>
-
+    <div class="version">
+        Current Version: 1.0<br>
+        New Version: 1.1 Available
     </div>
 
+    <button class="btn update"
+        onclick="alert('App Updating...')">
+        Update App
+    </button>
 
-    <div class="card">
+    <br><br>
 
-        <div class="vip">🔑 VIP LOGIN</div>
+    <h3>Monthly VIP Membership</h3>
 
-        <input
-            type="password"
-            id="vipPassword"
-            placeholder="رمز ورود VIP"
-        >
-
-        <button class="login" onclick="loginVIP()">
-            ورود به VIP
-        </button>
-
-        <div id="loginStatus" class="status hidden"></div>
-
+    <div class="price">
+        $15 / Month
     </div>
 
-
-    <div id="vipContent" class="card hidden">
-
-        <div class="vip">👑 VIP UNLOCKED</div>
-
-        <div class="status success">
-            دسترسی VIP شما فعال است.
-        </div>
-
-        <button class="admin" onclick="openVIP()">
-            🎥 ورود به ویدیوهای VIP
-        </button>
-
-        <button class="login" onclick="logoutVIP()">
-            خروج
-        </button>
-
-    </div>
-
-
-    <div class="card">
-
-        <div class="vip">⚙️ OWNER</div>
-
-        <input
-            type="password"
-            id="ownerPassword"
-            placeholder="رمز مدیریت"
-        >
-
-        <button class="admin" onclick="ownerLogin()">
-            ورود مدیر
-        </button>
-
-        <div id="ownerPanel" class="hidden">
-
-            <div class="status success">
-                🔒 پنل مدیریت باز شد
-            </div>
-
-            <p>وضعیت سیستم: فعال</p>
-            <p>قیمت VIP: $15</p>
-            <p>مدت VIP: 30 روز</p>
-
-        </div>
-
-    </div>
-
-    <div class="footer">
-        © 2026 AZ GYM — VIP System
-    </div>
+    <button class="btn purchase"
+        onclick="purchaseVIP()">
+        Purchase Now
+    </button>
 
 </div>
 
-
 <script>
-
-/*
-=====================================
- DEMO ONLY
-=====================================
-این رمزها فقط برای تست ظاهر هستند.
-برای امنیت واقعی آنها را در سرور قرار بده.
-*/
-
-const DEMO_VIP_PASSWORD = "VIP15";
-const DEMO_OWNER_PASSWORD = "OWNER15";
-
-let vipActive = false;
-
-
-/* پرداخت */
-function payVIP(){
-
-    const status = document.getElementById("paymentStatus");
-
-    status.classList.remove("hidden");
-    status.className = "status";
-
-    status.innerHTML =
-        "در حال انتقال به سیستم پرداخت...";
-
-    /*
-      اینجا باید درگاه واقعی پرداخت قرار بگیرد.
-      بعد از تأیید موفق پرداخت از سرور:
-      vipActive = true;
-    */
-
-    setTimeout(() => {
-
-        status.innerHTML =
-            "برای فعال‌سازی واقعی VIP باید پرداخت توسط سرور تأیید شود.";
-
-    },1000);
+function purchaseVIP(){
+    alert("Redirect to Payment Page");
+    // Payment Link
+    // window.location.href="payment.html";
 }
-
-
-/* ورود VIP */
-function loginVIP(){
-
-    const password =
-        document.getElementById("vipPassword").value;
-
-    const status =
-        document.getElementById("loginStatus");
-
-    status.classList.remove("hidden");
-
-    if(password === DEMO_VIP_PASSWORD){
-
-        vipActive = true;
-
-        document
-        .getElementById("vipContent")
-        .classList.remove("hidden");
-
-        status.className = "status success";
-        status.innerHTML =
-            "ورود موفق بود ✅";
-
-    }else{
-
-        status.className = "status error";
-        status.innerHTML =
-            "رمز اشتباه است ❌";
-    }
-}
-
-
-/* ورود به محتوای VIP */
-function openVIP(){
-
-    if(!vipActive){
-
-        alert("دسترسی VIP فعال نیست.");
-        return;
-    }
-
-    /*
-      اینجا می‌توانی صفحه vip-videos.html
-      را باز کنی.
-    */
-
-    window.location.href = "vip-videos.html";
-}
-
-
-/* خروج */
-function logoutVIP(){
-
-    vipActive = false;
-
-    document
-    .getElementById("vipContent")
-    .classList.add("hidden");
-
-    document
-    .getElementById("vipPassword")
-    .value = "";
-}
-
-
-/* پنل صاحب سایت */
-function ownerLogin(){
-
-    const password =
-        document.getElementById("ownerPassword").value;
-
-    const panel =
-        document.getElementById("ownerPanel");
-
-    if(password === DEMO_OWNER_PASSWORD){
-
-        panel.classList.remove("hidden");
-
-    }else{
-
-        alert("رمز مدیریت اشتباه است ❌");
-
-    }
-}
-
 </script>
 
 </body>
