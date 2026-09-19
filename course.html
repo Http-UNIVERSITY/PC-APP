@@ -169,7 +169,7 @@ footer{
         </div>
 
         <video controls poster="photo.jpg">
-            <source src="video.mp4" type="video/mp4">
+            <source src="web.mp4" type="video/mp4">
             Your browser does not support video.
         </video>
 
@@ -186,7 +186,7 @@ footer{
             <span class="badge">PHOTO</span>
         </div>
 
-        <img src="photo.jpg" class="photo" alt="Training Photo">
+        <img src="web.jpg" class="photo" alt="Training Photo">
 
         <button class="btn" onclick="downloadPhoto()">
             ⬇ Download Photo
@@ -252,7 +252,7 @@ function downloadVideo(){
 
     const link = document.createElement("a");
     link.href = "video.mp4";
-    link.download = "AZ-GYM-Video.mp4";
+    link.download = "web.mp4";
     link.click();
 
 }
@@ -260,8 +260,8 @@ function downloadVideo(){
 function downloadPhoto(){
 
     const link = document.createElement("a");
-    link.href = "photo.jpg";
-    link.download = "AZ-GYM-Photo.jpg";
+    link.href = "web.jpg";
+    link.download = "web.jpg";
     link.click();
 
 }
