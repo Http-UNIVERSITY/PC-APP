@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AZ GYM</title>
+<title>WEB COURSE- </title>
 
 <style>
 *{
@@ -14,332 +14,255 @@
 }
 
 body{
-    font-family:Arial,Tahoma,sans-serif;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#050b18,#0b2d55,#06111f);
     color:white;
     min-height:100vh;
+}
 
-    background:
-    linear-gradient(rgba(0,0,0,.72),rgba(0,8,25,.88)),
-    url("background.jpg");
+header{
+    padding:20px;
+    text-align:center;
+    background:rgba(0,0,0,.35);
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
 
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+header h1{
+    color:#42a5f5;
+    font-size:28px;
+}
+
+header p{
+    color:#b9c8d8;
+    margin-top:6px;
 }
 
 .container{
     width:94%;
     max-width:1000px;
-    margin:auto;
+    margin:25px auto;
 }
 
-/* HEADER */
-
-header{
-    text-align:center;
-    padding:30px 10px 20px;
+.card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
-.logo{
-    font-size:42px;
-    font-weight:bold;
+.title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
 }
 
-.logo span{
-    color:#00aaff;
+.title h2{
+    font-size:20px;
 }
 
-.subtitle{
-    margin-top:8px;
-    color:#b9dfff;
+.badge{
+    background:#1976d2;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:12px;
 }
 
 /* VIDEO */
-
-.video-box{
-    margin:25px 0;
-    padding:15px;
-
-    background:rgba(3,20,42,.88);
-
-    border:1px solid rgba(0,170,255,.4);
-
-    border-radius:20px;
-
-    box-shadow:
-    0 10px 35px rgba(0,0,0,.5);
-}
-
-.video-title{
-    font-size:22px;
-    color:#00b7ff;
-    margin-bottom:12px;
-}
-
 video{
     width:100%;
-    display:block;
-    border-radius:14px;
+    max-height:500px;
+    border-radius:15px;
     background:#000;
 }
 
+/* IMAGE */
+.photo{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+    border-radius:15px;
+    display:block;
+}
+
 /* CODE */
-
 .code-box{
-    margin:30px 0;
-
-    background:#050a12;
-
-    border:1px solid #164a70;
-
-    border-radius:18px;
-
+    position:relative;
+    background:#050505;
+    border-radius:15px;
     overflow:hidden;
-
-    direction:ltr;
-    text-align:left;
+    border:1px solid #263238;
 }
 
 .code-header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:12px 15px;
-
-    background:#0b1c30;
-
-    color:#00b7ff;
+    padding:10px 15px;
+    background:#101820;
+    color:#90caf9;
 }
 
-.code-header button{
-    border:0;
-    padding:8px 15px;
-
-    border-radius:8px;
-
-    background:#008cff;
+.copy{
+    background:#1976d2;
+    border:none;
     color:white;
-
+    padding:8px 14px;
+    border-radius:8px;
     cursor:pointer;
+}
+
+.copy:hover{
+    background:#42a5f5;
 }
 
 pre{
-    padding:20px;
-
-    overflow-x:auto;
-
-    color:#d8e8ff;
-
+    padding:18px;
+    overflow:auto;
+    color:#d7e3ee;
+    line-height:1.6;
     font-size:14px;
-
-    line-height:1.7;
 }
 
-/* BUTTONS */
-
-.buttons{
-    display:flex;
-    gap:12px;
-    margin:20px 0;
-}
-
+/* BUTTON */
 .btn{
-    flex:1;
-
+    width:100%;
+    border:none;
     padding:14px;
-
-    border:0;
+    margin-top:15px;
     border-radius:12px;
-
-    background:linear-gradient(
-        90deg,
-        #007cff,
-        #00bfff
-    );
-
+    background:#1976d2;
     color:white;
-
     font-size:16px;
-    font-weight:bold;
-
     cursor:pointer;
 }
 
-/* FOOTER */
+.btn:hover{
+    background:#42a5f5;
+}
 
 footer{
     text-align:center;
-
-    padding:35px 10px;
-
-    color:#91a7bd;
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-    .logo{
-        font-size:34px;
-    }
-
-    .video-title{
-        font-size:19px;
-    }
-
-    pre{
-        font-size:12px;
-    }
-
-    .buttons{
-        flex-direction:column;
-    }
+    color:#78909c;
+    padding:25px;
+    font-size:13px;
 }
 </style>
 </head>
 
-
 <body>
+
+<header>
+    <h1>WEB COURSE</h1>
+    <p>Video • Photo • Code</p>
+</header>
 
 <div class="container">
 
-<header>
+    <!-- VIDEO -->
+    <div class="card">
+        <div class="title">
+            <h2>🎬 Training Video</h2>
+            <span class="badge">VIDEO</span>
+        </div>
 
-    <div class="logo">
-        AZ <span>GYM</span>
+        <video controls poster="photo.jpg">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+
+        <button class="btn" onclick="downloadVideo()">
+            ⬇ Download Video
+        </button>
     </div>
 
-    <div class="subtitle">
-        Fitness • Training • Programming
+
+    <!-- PHOTO -->
+    <div class="card">
+        <div class="title">
+            <h2>🖼 Training Photo</h2>
+            <span class="badge">PHOTO</span>
+        </div>
+
+        <img src="photo.jpg" class="photo" alt="Training Photo">
+
+        <button class="btn" onclick="downloadPhoto()">
+            ⬇ Download Photo
+        </button>
     </div>
 
-</header>
 
+    <!-- CODE -->
+    <div class="card">
+        <div class="title">
+            <h2>💻 Source Code</h2>
+            <span class="badge">CODE</span>
+        </div>
 
-<!-- VIDEO 1 -->
+        <div class="code-box">
 
-<div class="video-box">
+            <div class="code-header">
+                <span>HTML</span>
+                <button class="copy" onclick="copyCode()">
+                    Copy
+                </button>
+            </div>
 
-    <div class="video-title">
-        🎥 ویدیو تمرینی شماره ۱
-    </div>
+            <pre id="code">&lt;div class="welcome"&gt;
+    &lt;h1&gt;Welcome to AZ GYM&lt;/h1&gt;
+    &lt;p&gt;Start your workout today!&lt;/p&gt;
+&lt;/div&gt;</pre>
 
-    <video controls poster="video1.jpg">
+        </div>
 
-        <source
-            src="video1.mp4"
-            type="video/mp4">
-
-        مرورگر شما از ویدیو پشتیبانی نمی‌کند.
-
-    </video>
-
-</div>
-
-
-<!-- CODE -->
-
-<div class="code-box">
-
-    <div class="code-header">
-
-        <span>HTML / CSS</span>
-
-        <button onclick="copyCode()">
-            Copy
+        <button class="btn" onclick="showCode()">
+            👁 Display Code
         </button>
 
     </div>
 
-<pre id="code">
-&lt;div class="az-gym"&gt;
-
-    &lt;h1&gt;AZ GYM&lt;/h1&gt;
-
-    &lt;p&gt;
-        Welcome to AZ GYM
-    &lt;/p&gt;
-
-    &lt;button&gt;
-        Start Training
-    &lt;/button&gt;
-
-&lt;/div&gt;
-</pre>
-
 </div>
-
-
-<!-- BUTTONS -->
-
-<div class="buttons">
-
-    <button class="btn"
-    onclick="showCode()">
-        نمایش کد
-    </button>
-
-    <button class="btn"
-    onclick="alert('AZ GYM Ready!')">
-        شروع
-    </button>
-
-</div>
-
-
-<!-- VIDEO 2 -->
-
-<div class="video-box">
-
-    <div class="video-title">
-        🎥 ویدیو تمرینی شماره ۲
-    </div>
-
-    <video controls poster="video2.jpg">
-
-        <source
-            src="video2.mp4"
-            type="video/mp4">
-
-        مرورگر شما از ویدیو پشتیبانی نمی‌کند.
-
-    </video>
-
-</div>
-
 
 <footer>
-
-    © 2026 AZ GYM
-    <br>
-    Fitness & Training
-
+    © 2026 AZ GYM • All Rights Reserved
 </footer>
-
-</div>
 
 
 <script>
 
 function copyCode(){
 
-    const code =
-        document.getElementById("code").innerText;
+    let code = document.getElementById("code").innerText;
 
     navigator.clipboard.writeText(code);
 
-    alert("کد کاپی شد ✅");
+    alert("Code copied successfully!");
 }
-
 
 function showCode(){
 
-    document
-    .getElementById("code")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+    alert(
+        document.getElementById("code").innerText
+    );
+}
+
+function downloadVideo(){
+
+    const link = document.createElement("a");
+    link.href = "video.mp4";
+    link.download = "AZ-GYM-Video.mp4";
+    link.click();
+
+}
+
+function downloadPhoto(){
+
+    const link = document.createElement("a");
+    link.href = "photo.jpg";
+    link.download = "AZ-GYM-Photo.jpg";
+    link.click();
 
 }
 
