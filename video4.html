@@ -71,37 +71,120 @@ Copy
 </button>
 </div>
 <pre id="code">
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-public class StudentsReport extends JFrame{
-JTable table;
-public StudentsReport(){ ﻧﻤﺎﯾﺶ
 
-▶
-setTitle("Students Reports");
-setSize(800,500);
-String data[][]={
-{"100","Omar","Ali","Kabul","Male"},
-{"101","Karim","Rahim","Herat","Male"},
-{"102","Narois","Rahim","Herat","Female"}
-};
-String column[]={
-"ID",
-"Name",
-"Father Name",
-"Address",
-"Gender"
-};
-table=new JTable(
-new DefaultTableModel(data,column)
-);
-add(new JScrollPane(table));
-this.dispose();
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
+import test.Dashbord;
+
+
+public class Search extends javax.swing.JFrame {
+
+   
+
+    
+    public Search() {
+        initComponents();
+        ButtonGroup bg=new ButtonGroup();
+        bg.add(txtmale);
+        bg.add(txtfemale);
+        txtmale.setSelected(true);
+    }
+    private void Search(){
+        
+    }
+ 
+   
+
+    private void jButton2MousePressed(java.awt.event.MouseEvent evt) {                                      
+        new Dashbord().show();
+        this.dispose();
+        // TODO add your handling code here:
+    }                                     
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+               
+    }                                        
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {                                      
+    try
+{
+   Class.forName("com.mysql.cj.jdbc.Driver");
+    Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/gym","root","1234");
+    String sql="select * from management where id=?";
+   PreparedStatement pstm= con.prepareStatement(sql);
+pstm.setInt(1, Integer.parseInt(txtid1.getText()));
+ResultSet rs=pstm.executeQuery();
+if (rs.next())
+{
+ txtname.setText(rs.getString("name"));
+ txtlname.setText(rs.getString("lname"));
+ txtusername.setText(rs.getString("username"));
+ txtpassword.setText(rs.getString("password"));
+ txtrepassword.setText(rs.getString("repassword"));
+ txtgender.setText(rs.getString("gender"));
 }
-public static void main(String args[]){
-new StudentsReport();
+else
+{
+JOptionPane.showMessageDialog(null,"RECORD NOT FOUND");
 }
+con.close();
 }
+catch (Exception e)
+{
+   JOptionPane.showMessageDialog(null, e.getMessage());
+}
+    }                                     
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+         txtid1.setText("");
+txtname.setText("");
+txtlname.setText("");
+txtusername.setText("");
+txtpassword.setText("");
+txtrepassword.setText("");
+    }                                        
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {                                     
+        System.exit(0);
+    }                                    
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        
+    }                                     
+
+   
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton txtfemale;
+    private javax.swing.JLabel txtgender;
+    private javax.swing.JTextField txtid1;
+    private javax.swing.JTextField txtlname;
+    private javax.swing.JRadioButton txtmale;
+    private javax.swing.JTextField txtname;
+    private javax.swing.JPasswordField txtpassword;
+    private javax.swing.JPasswordField txtrepassword;
+    private javax.swing.JTextField txtusername;
+    // End of variables declaration                   
+
+}
+
+
+  
 </pre>
 </div>
 <div id="preview"></div>
