@@ -61,14 +61,112 @@ Dashboard.java
  Copy</button>
 </div>
 <pre id="code">
-public class Dashboard extends JFrame{
-JButton home;
-JButton student;
-JButton teacher;
-JButton setting;
-JButton classes;
-JButton update;
+package javaapplication7;
+import java.sql.*;
+import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
+package javaapplication7;
+
+import javax.swing.JOptionPane;
+
+
+public class DashBoard extends javax.swing.JFrame {
+
+    /**
+     * Creates new form DashBoard
+     */
+    public DashBoard() {
+        initComponents();
+    }
+
+   
+                   
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {                                     
+        System.exit(0);
+    }                                    
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+login1 lg=new login1();
+lg.setVisible(true);
+this.dispose();
+    }                                        
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {                                      
+
+    }                                     
+
+    private void jPanel5MousePressed(java.awt.event.MouseEvent evt) {                                     
+new patient().show();
+this.dispose();
+    }                                    
+
+    private void jLabel11MousePressed(java.awt.event.MouseEvent evt) {                                      
+new Diagnoses().show();
+this.dispose();
+    }                                     
+
+    private void jPanel8MousePressed(java.awt.event.MouseEvent evt) {                                     
+new Doctors().show();
+this.dispose();
+    }                                    
+
+    private void jLabel14MousePressed(java.awt.event.MouseEvent evt) {                                      
+new Employees().show();
+this.dispose();
+    }                                     
+
+    private void jLabel15MousePressed(java.awt.event.MouseEvent evt) {                                      
+new login1().show();
+this.dispose();
+{
+JOptionPane.showMessageDialog(null,"your logout");
 }
+    }                                     
+
+    private void jPanel7MousePressed(java.awt.event.MouseEvent evt) {                                     
+new update().show();
+this.dispose();
+    }                                    
+
+   
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    // End of variables declaration                   
+
+   
 </pre>
 </div>
 <h2 style="color:white;text-align:center">
